@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.wrapper {
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 350px;
+}
+
+.rating-wrapper {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.btn-rating,
+.btn-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: hsla(216, 12%, 54%, 0.103);
+  border: none;
+  color: var(--Light-Grey);
+  cursor: pointer;
+}
+.btn-rating:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating-text-wrapper,
+.thank-you-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.thank-you-text-wrapper {
+  align-items: center;
+}
+
+.title {
+  color: var(--White);
+  font-size: 26px;
+}
+
+.text {
+  color: var(--Light-Grey);
+  line-height: 1.5;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--Orange);
+  border: none;
+  padding: 1rem;
+  color: var(--White);
+  border-radius: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  color: var(--Orange);
+  background-color: var(--White);
+}
+
+.thank-you-wrapper {
+  align-items: center;
+  padding: 2.2rem;
+  gap: 34px;
+}
+.ratingResult {
+  color: var(--Orange);
+  padding: 0.4rem 1.2rem;
+  background-color: hsla(216, 12%, 54%, 0.103);
+  justify-self: center;
+  border-radius: 1rem;
+}
+
+.display {
+  display: none;
+}
+.selected {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+@media screen and (max-width: 360px) {
+  .wrapper {
+    max-width: 300px;
+    padding: 1.6rem;
+  }
+}
